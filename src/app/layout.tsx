@@ -1,3 +1,6 @@
+//Main layout 
+//Este layout funje como principal y carece de pagina page por la configuracion en la carpeta Practicas bootstrap
+
 import type { Metadata } from "next";
 
 
@@ -14,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-        {children}
+       {children}
       </body>
     </html>
   );
