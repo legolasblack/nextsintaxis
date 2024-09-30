@@ -18,7 +18,7 @@ const page: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <p className="text-3xl text-blue-400 underline">
+            <p className="text-3xl text-red-500">
                 Hello world!
             </p>
         </>
