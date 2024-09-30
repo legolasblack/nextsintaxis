@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 
 /* Importacion de styles vamos a poner todo lo general dentro de este layout */
 import '../../styles/global.css'
+import { Providers } from "./Providers";
 /*Fin  importacion de styles vamos a poner todo lo general dentro de este layout */
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-       {children}
+      {children}
       </body>
     </html>
   );
