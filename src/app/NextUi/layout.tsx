@@ -2,7 +2,8 @@
 //Este layout funje como principal y carece de pagina page por la configuracion en la carpeta Practicas bootstrap
 
 import type { Metadata } from "next";
-
+import { Providers } from "../Providers";
+import { div } from "framer-motion/client";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,10 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body >
-       {children}
-      </body>
-    </html>
+
+    <div>
+      <Providers>
+        {children}
+      </Providers>
+    </div>
   );
 }
