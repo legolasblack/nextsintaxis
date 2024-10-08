@@ -1,0 +1,7 @@
+.overflow{
+    
+    max-height: 800px;
+    overflow: auto;
+    padding-bottom: 300px;
+    padding-right: 30px;
+}

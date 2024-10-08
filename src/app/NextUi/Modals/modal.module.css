@@ -1,0 +1,9 @@
+.customModal{
+    width: 5000px !important;
+    max-height: 90%;
+    border-radius: 5px;
+    border: 2px solid gray;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+

@@ -22,7 +22,29 @@ export default function RootLayout({
     <html lang="en">
       <body className="dark text-foreground bg-background">
         {children}
+   {/*      <>
+        <layout>
+          <Navbar>
+            <button>agregar incidencia</button>
+            <modal>
+              <form action="">
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+              </form>
+            </modal>
+          </Navbar>
+          <Page>
+            <Dashboardcontainer>
+              etc...
+            </Dashboardcontainer>
+          </Page>
+        </layout>
+        </> */}
       </body>
     </html>
+
+    
   );
 }

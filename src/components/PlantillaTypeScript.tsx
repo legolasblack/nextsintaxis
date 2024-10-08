@@ -33,6 +33,27 @@ function errorFatal(): never { // Función que nunca termina
     throw new Error("Error");
 }
 
+/* Declaracion ejemplo de funciones individuales */
+function miFuncion(param1: number, param2: string): void {
+  console.log(param1, param2);
+}
+
+const miFuncion2 = function(param1: number, param2: string): void {
+  console.log(param1, param2);
+};
+
+
+const miFuncion3 = (param1: number, param2: string): void => {
+  console.log(param1, param2);
+};
+
+
+/* aqui abajo un ejemplo de un tipado de la funcion  */
+type MiFuncionTipo = (param1: number, param2: string) => void;
+
+const miFunciontipada: MiFuncionTipo = (param1, param2) => {
+    console.log(param1, param2);
+};
 /* --------------------------------------------------------------A PARTIR DE AQUI COMIENZA LA DECLARACION DE LA FUNCION EJEMPLO--------------------------------------------------------- */
 
 interface Props {
