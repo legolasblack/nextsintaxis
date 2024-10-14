@@ -54,6 +54,8 @@ export default function IncidenciaForm() {
             </p> */}
 
             <form onSubmit={onSubmit} className={style.overflow}>
+                {/* En este espacio  */}
+
                 <Input
                     type="text"
                     label="Email"
@@ -81,7 +83,7 @@ export default function IncidenciaForm() {
                     */}
                     <input
                         id="name"
-                        className={(errors?.name?.type) ? "w-full p-3 text-white border border-red-500 mb-1" : "w-full p-3 text-white border border-gray-100"}
+                        className={(errors.name?.type)? "w-full p-3 text-white border border-red-500 mb-1" : "w-full p-3 text-white border border-gray-100"}
                         type="text"
                         placeholder="Nombre"
                         {...register('name',
@@ -92,9 +94,9 @@ export default function IncidenciaForm() {
                             }
                         )}
                     />
-                    {errors?.name?.type == "required" && <span className="text-white bg-red-500 rounded-md px-2">{errorRequerido}</span>}
-                    {errors?.name?.type == "minLength" && <span className="text-white bg-red-500 rounded-md px-2">{errorMinLength}</span>}
-                    {errors?.name?.type == "maxLength" && <span className="text-white bg-red-500 rounded-md px-2">{errorMinLength}</span>}
+                    {errors.name?.type == "required" && <span className="text-white bg-red-500 rounded-md px-2">{errorRequerido}</span>}
+                    {errors.name?.type == "minLength" && <span className="text-white bg-red-500 rounded-md px-2">{errorMinLength}</span>}
+                    {errors.name?.type == "maxLength" && <span className="text-white bg-red-500 rounded-md px-2">{errorMinLength}</span>}
                 </div>
                 <div className="">
 
@@ -103,7 +105,9 @@ export default function IncidenciaForm() {
                         Apellido
                     </label>
 
-                    {/*  */}
+                    {/* Aqui vamos a docomentar la forma mas utilizada para en una sola configuracion mandar tambien 
+                    imprimir el mansaje una vez que se sucite el error, esto se logra agregando un objeto a la propiedad 
+                    required o minLenght */}
                     <input
                         id="lastname"
                         className="w-full p-3 text-white border border-gray-100"
@@ -111,9 +115,18 @@ export default function IncidenciaForm() {
                         placeholder="Nombre"
                         {...register('lastname',
                             {
-                                required: true,
-                                minLength: 2,
-                                maxLength: 20
+                                required: {
+                                    value:true,
+                                    message: "This Input is required"
+                                },
+                                minLength: {
+                                    value:2,
+                                    message: "This Input required Minimum 2 caracters"
+                                },
+                                maxLength: {
+                                    value:20,
+                                    message: "This Input required Maximum 2 caracters"
+                                },
                             }
                         )}
                     />
