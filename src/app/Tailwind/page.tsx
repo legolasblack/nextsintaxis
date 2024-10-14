@@ -1,6 +1,7 @@
 //Main page para practicas de Tailwind 
 
 
+import MainScreen from '@/components/mainScreen/MainScreen';
 import React from 'react';
 
 const page: React.FC = () => {
@@ -8,19 +9,7 @@ const page: React.FC = () => {
 
     return (
         <>
-            <p>Empecemos con Tailwind</p>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-6">
-                        <p className='back-black'>
-                            {contenido}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <p className="text-3xl text-red-500">
-                Hello world!
-            </p>
+         <MainScreen/>
         </>
 
     );

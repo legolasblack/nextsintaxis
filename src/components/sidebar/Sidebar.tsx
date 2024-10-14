@@ -18,7 +18,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children })=> {
   const [expanded, setExpanded] = useState(true)
   
   return (
-    <aside className="h-screen">
+    <aside className="h-screen fixed">
       <nav className={`h-full flex flex-col bg-white border-r shadow-sm ${expanded ? 'w-64' : 'w-16'} transition-width duration-300 overflow-auto`}>
         <div className="p-4 pb-2 flex justify-between items-center">
           <Image

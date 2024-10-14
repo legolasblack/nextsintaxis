@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="dark text-foreground bg-background">
+      <body className="ligth text-foreground bg-background">
         {children}
       </body>
     </html>
