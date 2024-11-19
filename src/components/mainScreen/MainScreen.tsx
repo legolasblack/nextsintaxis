@@ -92,7 +92,7 @@ export default function MainScreen({ }: PropsMainScreen) {
                         <p className="text-2xl">
                             Incidencias Abiertas
                         </p>
-                        <CardIncidencia></CardIncidencia>
+                        <CardIncidencia ></CardIncidencia>
                     </div>
                     <div className='w-1/3 bg-gray-200 p-2 text-center m-2 rounded-md h-screen'>
                         <p className="text-2xl">

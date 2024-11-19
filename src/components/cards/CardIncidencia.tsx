@@ -15,7 +15,7 @@ export default function CardIncidencia({}: Props) {
 
 
   return (
-    <Card className="max-w-[340px] mt-5 h-auto">
+    <Card className="max-w-[380px] h-auto m-auto mt-5">
       <CardHeader className="justify-between">
         <div className="flex gap-5">
           <Avatar isBordered radius="full" size="md" src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
