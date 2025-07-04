@@ -1,0 +1,33 @@
+.container {
+  display: flex;                  /* Usa Flexbox para distribuir los elementos hijos */
+  flex-wrap: wrap;               /* Permite que los elementos hijos pasen a la siguiente línea si no caben */
+  gap: 1rem;                     /* Espacio entre los elementos hijos (tanto filas como columnas) */
+  padding: 1rem;                 /* Espaciado interno del contenedor */
+}
+
+.card {
+  background-color: greenyellow; /* Color de fondo para las tarjetas */
+  color: black;                  /* Color del texto */
+  padding: 1rem;                 /* Espaciado interno de la tarjeta */
+  border-radius: 8px;            /* Bordes redondeados de 8 píxeles */
+  flex: 1 1 100%;                /*                              flex-grow: 1  → puede crecer
+                                   flex-shrink: 1 → puede reducirse
+                                   flex-basis: 100% → ocupa todo el ancho disponible por defecto
+                                 */
+  height: 25vh;
+  min-width: 6rem;
+}
+
+/* A partir de 768px de ancho de pantalla (tablets o más) */
+@media (min-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 1rem); /* Ocupa el 50% del ancho, menos el espacio del gap */
+  }
+}
+
+/* A partir de 1024px de ancho de pantalla (escritorios o más) */
+@media (min-width: 1024px) {
+  .card {
+    flex: 1 1 calc(25% - 1rem); /* Ocupa el 25% del ancho, menos el espacio del gap */
+  }
+}
