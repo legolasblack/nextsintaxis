@@ -2,6 +2,8 @@
 
 
 import React from 'react';
+import ClasesCemanticas from './Componentes/ClasesCemanticas';
+import IconoCustom from './Componentes/IconoCustom';
 
 const page: React.FC = () => {
     let contenido: string = " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus nemo, numquam mollitia vero, voluptate asperiores labore voluptates, eius eum soluta quae cumque";
@@ -9,18 +11,9 @@ const page: React.FC = () => {
     return (
         <>
             <p>Empecemos con Tailwind</p>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-6">
-                        <p className='back-black'>
-                            {contenido}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <p className="text-3xl text-red-500">
-                Hello world!
-            </p>
+            <ClasesCemanticas />
+            <IconoCustom name="facebook"/>
+            <IconoCustom name="twitch" size={50}/>
         </>
 
     );
